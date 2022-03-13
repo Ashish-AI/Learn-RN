@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, StyleSheet, TextInput, View } from "react-native";
+import { Button, StyleSheet, Text, TextInput, View } from "react-native";
 
 export default function App() {
   const [task, setTask] = React.useState("");
@@ -24,6 +24,12 @@ export default function App() {
       </View>
       <View style={{ padding: 20 }}>
         <Button title="Add" onPress={handlePress}></Button>
+      </View>
+
+      <View>
+        {goalArray.map((goal) => (
+          <Text key={goal}>{goal}</Text>
+        ))}
       </View>
     </View>
   );
